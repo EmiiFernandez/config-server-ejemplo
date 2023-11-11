@@ -1,6 +1,6 @@
 #Configuraci�n
 server:
-  port: 8084
+  port: 8085
 
 spring:
   application:
