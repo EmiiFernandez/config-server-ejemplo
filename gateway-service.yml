@@ -17,9 +17,6 @@ spring:
       discovery:
         serviceId: config-service
         enabled: true
-      #Filtro para token en todas las rutas
-      default-filters:
-        - TokenRelay=
       #Config rutas
       routes:
          #identificador de la ruta.
@@ -32,6 +29,9 @@ spring:
                           #solicitud llegue al servicio
           predicates:
             - Path=/checkout
+                #Filtro para token en todas las rutas
+          default-filters:
+            - TokenRelay=
           filters:
             #default-filters: --> Para utilizar los filtros en todas las rutas
             #AddRequestHeader --> agrega un header a la request
