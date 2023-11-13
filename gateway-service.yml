@@ -14,6 +14,9 @@ spring:
           #En settings de KeyCloak busco OpenID Endpoint Configuration y en el JSON es la url "issuer" 
   cloud:
     gateway:
+      #Filtro para token en todas las rutas
+      default-filters:
+        - TokenRelay=
       discovery:
         serviceId: config-service
         enabled: true
@@ -35,9 +38,6 @@ spring:
             #AddReesponseHeader --> agrega algo al header en la response
             - AddRequestHeader=X-Request-from, gateway
             - AddResponseHeader=X-Response-Red, Blue
-            #Filtro para token en todas las rutas
-            default-filters:
-              - TokenRelay=
         - id: products-service
           uri: lb://products-service
           predicates:
