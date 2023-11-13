@@ -17,6 +17,8 @@ spring:
       discovery:
         serviceId: config-service
         enabled: true
+      default-filters:
+        - TokenRelay=
       #Config rutas
       routes:
          #identificador de la ruta.
