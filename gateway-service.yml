@@ -16,7 +16,7 @@ spring:
     gateway:
       #Filtro para token en todas las rutas
       default-filters:
-        - TokenRelay=
+        - TokenRelay
       discovery:
         serviceId: config-service
         enabled: true
