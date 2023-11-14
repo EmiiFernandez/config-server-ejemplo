@@ -21,6 +21,7 @@ spring:
       #Filtro para token en todas las rutas
       default-filters:
         - TokenRelay=
+        - RemoveRequestHeader=Cookie
       routes:
          #identificador de la ruta.
         #No podemos tener dos rutas apuntando al mismo servicio
