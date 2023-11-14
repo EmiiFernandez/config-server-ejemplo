@@ -14,11 +14,8 @@ spring:
           #En settings de KeyCloak busco OpenID Endpoint Configuration y en el JSON es la url "issuer" 
   cloud:
     gateway:
-    #Filtro para token en todas las rutas
-      default-filters:
-        - TokenRelay=
-        - RemoveRequestHeader=Cookie
-      
+      default-filters:     #Filtro para en todas las rutas
+        - TokenRelay= #Token para todas las rutas    
       discovery:
         serviceId: config-service
         enabled: true
