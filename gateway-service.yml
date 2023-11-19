@@ -15,14 +15,14 @@ spring:
           #En settings de KeyCloak busco OpenID Endpoint Configuration y en el JSON es la url "issuer" 
   cloud:
     gateway:
+      default-filters:     #Filtro para en todas las rutas
+        - TokenRelay= #Token para todas las rutas   
       discovery:
         serviceId: config-service
         enabled: true
       #Config rutas
       
-      routes:
-        default-filters:     #Filtro para en todas las rutas
-          - TokenRelay= #Token para todas las rutas    
+      routes: 
          #identificador de la ruta.
         #No podemos tener dos rutas apuntando al mismo servicio
         - id: checkout-service
