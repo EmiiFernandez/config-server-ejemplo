@@ -37,8 +37,8 @@ spring:
             #default-filters: --> Para utilizar los filtros en todas las rutas
             #AddRequestHeader --> agrega un header a la request
             #AddReesponseHeader --> agrega algo al header en la response
-            - AddRequestHeader=X-Request-from, gateway
-            - AddResponseHeader=X-Response-Red, Blue
+            #- AddRequestHeader=X-Request-from, gateway
+            #- AddResponseHeader=X-Response-Red, Blue
         - id: products-service
           uri: lb://products-service
           predicates:
