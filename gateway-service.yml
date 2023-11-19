@@ -6,6 +6,7 @@ spring:
   application:
     name: gateway-service
   #Config como servidor de recursos con KeyCloak
+  #Config de donde está el proveedor que esta emitiendo los token
   security:
     oauth2:
       resourceserver:
