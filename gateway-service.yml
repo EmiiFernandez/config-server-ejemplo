@@ -18,8 +18,8 @@ spring:
       discovery:
         serviceId: config-service
         enabled: true
-      default-filters:     #Filtro para en todas las rutas
-        - TokenRelay= #Token para todas las rutas   
+     # default-filters:     #Filtro para en todas las rutas
+      #  - TokenRelay= #Token para todas las rutas   
       
       #Config rutas
       routes: 
