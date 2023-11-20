@@ -7,19 +7,19 @@ spring:
     name: gateway-service
   #Config como servidor de recursos con KeyCloak
   #Config de donde está el proveedor que esta emitiendo los token
-  #security:
-   # oauth2:
-    #  resourceserver:
-     #   jwt:
-      #    issuer-uri: http://localhost:8080/realms/dh 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/dh 
           #En settings de KeyCloak busco OpenID Endpoint Configuration y en el JSON es la url "issuer" 
   cloud:
     gateway:
       discovery:
         serviceId: config-service
         enabled: true
-     # default-filters:     #Filtro para en todas las rutas
-      #  - TokenRelay= #Token para todas las rutas   
+      default-filters:     #Filtro para en todas las rutas
+        - TokenRelay= #Token para todas las rutas   
       
       #Config rutas
       routes: 
